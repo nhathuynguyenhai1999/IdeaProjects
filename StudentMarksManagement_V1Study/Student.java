@@ -2,10 +2,24 @@ class Student {
     private static int count = 0;
     private int id;
     private String name;
+//
     private String className;
     private float math;
     private float physics;
     private float chemistry;
+
+    public void setClassName(ClassName className) {
+        this.className = String.valueOf(className);
+    }
+
+    public Student(int id, String name, ClassName className, float math, float physics, float chemistry) {
+        this.id = id;
+        this.name = name;
+        this.className = String.valueOf(className);
+        this.math = math;
+        this.physics = physics;
+        this.chemistry = chemistry;
+    }
 
     public Student() {
         count++;
@@ -75,6 +89,14 @@ class Student {
     public String toString() {
         return String.format("%s,%s,%s,%s,%s", this.id, this.name, this.math, this.chemistry, this.physics);
     }
+
+    public boolean contains(String classNameToCheck) {
+        return this.className.equals(classNameToCheck);
+    }
+    public boolean contains(Student otherStudent) {
+        return this.className.equals(otherStudent.getClassName());
+    }
+
 }
 
 

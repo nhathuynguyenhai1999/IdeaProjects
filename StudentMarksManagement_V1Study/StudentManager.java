@@ -6,10 +6,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class StudentManager {
-    private static final String FILE_PATH = "Student.csv";
+    private static final String STUDENT_FILE_PATH = "Student.csv";
+    private static final String CLASSNAME_FILE_PATH = "ClassName.csv";
     public   void listStudents() {
 
-        List<Student> students = FileUtils.readStudentsFromFile(FILE_PATH);
+        List<Student> students = FileUtils.readStudentsFromFile(STUDENT_FILE_PATH);
         System.out.println("List of Students:");
         for (Student student : students) {
             student.display();
@@ -22,7 +23,8 @@ public class StudentManager {
         // Your classification logic
     }
     public  void addStudent(Scanner scanner) {
-        List<Student> students = FileUtils.readStudentsFromFile(FILE_PATH);
+        List<Student> students = FileUtils.readStudentsFromFile(STUDENT_FILE_PATH);
+        List<ClassName> classNames = FileUtils.readClassNamesFromFile(CLASSNAME_FILE_PATH);
 
         Student student = new Student();
         System.out.print("Enter student name: ");
@@ -38,8 +40,13 @@ public class StudentManager {
 
         students.add(student);
 
+        Student ClassName = null;
+        if (!ClassName.contains(ClassName)){
+//            classNames.add(ClassName);
+        }
 
-        FileUtils.writeStudentsToFile(FILE_PATH, students);
 
+        FileUtils.writeStudentsToFile(STUDENT_FILE_PATH, students);
+//        FileUtils.writeClassNamesToFile(CLASSNAME_FILE_PATH,classNames);
     }
 }
