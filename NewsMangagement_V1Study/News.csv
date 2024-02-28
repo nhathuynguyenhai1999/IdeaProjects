@@ -1,0 +1,229 @@
+MK microsoft: nhathuy1999
+Mk Karpersky Password Manager
+nhathuy0110199901248101999
+Mk instagram : huy@01101999
+Tài khoản github
+nhathuynguyenhai@gmail.com
+17T1021108@husc.edu.vn
+mật khẩu : nhathuy@01101999
+
+Mk facebook: nhathuy@01101999 - huy@01101999 - khongaiyeuanhca1minhanhthoi
+
+100867429744: VietinBank
+https://drive.google.com/drive/u/0/folders/1sZCSAtahxSKH9QpsxE9LNXSxIMZQIxoe
+
+MK ciscopackertracer
+nguyenchaienxetang@gmail.com
+Nhathuy01101999
+
+Mật khẩu Shopee 0848101999 : Huy@01101999
+Mật khẩu Lazada : nhathuy1999
+17T1021108 mk microsoft teams : huy@0110
+
+mật khẩu Microsoft cho email nhathuynguyenhai@gmail.com
+mật khẩu máy ảo win2012 : Nhathuy1999
+
+https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016
+
+bệnh viện hoàng việt thắng
+
+$ cat /etc/passwd
+$ grep root /etc/passwd
+$ grep root /etc/*
+
+linux gồm có 3 mảng chính application kernel và hardware
+application nói về các trình quản lý
+kernel sẽ nói về RAM số dung lượng chạy trong 1 chương trình
+hardware nói về ổ đĩa cứng mà mình làm việc
+sudo vipw : ghi lại lệnh đã thực hiện trên hệ thống local2
+
+ps x Hiển thị tất cả các quy trình đang chạy của bạn.
+ps ax Hiển thị tất cả các quy trình trên hệ thống, không chỉ những quy trình mà bạn sở hữu.
+ps u Bao gồm thông tin chi tiết hơn về các quy trình.
+ps w Hiển thị tên lệnh đầy đủ, không chỉ những gì phù hợp trên một dòng.
+lệnh mount để hiển thị các thông tin của các tập tin hiện tại trong máy của bạn
+
+df -ha kiểm tra ổ cứng máy mình
+lệnh sudo chỉ sử dụng cho người dùng admin
+lệnh chmod
+cat /etc/group xem tất cả group trong windows
+lệnh chown : chuyển đổi người sở hữu
+( https://www.youtube.com/watch?v=ob3SLQoMJOo )
+
+df -h tổng dung lượng mà mình đã sử dụng
+ls -l | wc -l : tổng số dung lượng lớn đã sử dụng
+ls -l | sort -rh | head - number : liệt kê số dung lượng lớn nhất
+
+ls -l /var/log : danh sách file log trong folder của một user
+cặp key trên cmd : nhathuy (passphrase)
+
+tìm hiểu cách ssh từ windows vào server ubuntu
+vì devops toàn dùng key ssh để vào chứ ko cấp quyền biết user & passs
+ssh : publickey , private key đồ các kiểu ...
+windows thì e tạo cặp key ssh-keygen -t rsa -b 4096
+gõ ở cmd
+
+
+id_rsa.pub là cái file nó chứa key public
+e bỏ nó vào ubuntu để server nhận diện với cái key private ở windows
+khớp nhau thì cho kết nối
+
+
+
+ubuntu
+ Open SSH
+· sudo apt-get install openssh-server
+" systemctl restart sshd "
+" systemctl status ssh " ( Check ssh status )"
+
+status active là đã cài đc openssh
+
+sudo vim  /etc/ssh/sshd_confi
+
+edit
+dòng " #PermitRootLogin prohibit-password " to " PermitRootLogin no "
+
+e dùng lệnh
+
+scp "C:\Users\Admin\.ssh\id_rsa.pub" nhathuy@192.168.22.130:~/ .ssh
+
+đứng từ windows copy file lên
+
+nếu ko dùng lệnh dùng app filezilla để chuyển file
+
+phải tạo folder .ssh ở ubuntu set quyền 700 cho nó
+
+ở file sshd_config có dòng PasswordAuthentication e sửa thành yes,
+rồi thử đứng từ windows xem ssh vào bằng password đc ko
+vim thì :wq!#
+
+mật khẩu aws : Nhathuy@01101999
+
+$ ps -eo pid,euser,ruser,comm
+$ grep password.*unix /etc/pam.d/*
+
+lệnh date : hiển thị thời gian ngày user
+$ export TZ=US/Central
+$ date
+$ TZ=US/Central date : biểu thị thời gian hiện tại dưới dạng số giây kể từ 12 giờ đêm trở đi Ngày 1 tháng 1 năm 1970, UTC.
+https://shareprogramming.net/tong-hop-35-lenh-git-co-ban/
+
+$ lsof : lệnh chạy tạo ra lượng đầu vào rất lớn bao gồm các tệp mở ra từ init.
+$ lsof/usr : Để liệt kê các tệp đang mở cho một ID quy trình cụ thể
+$ strace cat /dev/null : in tất cả các lệnh gọi hệ thống mà một tiến trình thực hiện
+$ uptime : đo thời gian hoạt động của một user
+$ vmstat : tần suất hoạt động kernel của một user , mức độ làm việc của CPU và IO
+$ iostat : hiển thị số liệu thống kê hoạt động hiện tại của máy bạn
+$ iostat -p ALL : hiển thị các thông tin phân vùng số liệu thống kê hoạt động hiện tại của một user
+$ pidstat : Tiện ích pidstat cho phép bạn xem mức tiêu thụ tài nguyên của một quá trình theo thời gian
+
+$ netstat -ntl : liệt kê tất cả các cổng TCP của một user
+
+$ netcat -l
+$ netcat host port
+$ nmap host :
+$ ldd /bin/bash
+chạy nmap để quét chung với máy chủ của user
+
+
+$ sed 's/:/%/' /etc/passwd: gửi kết quả ra đầu chuẩn của một user
+$ sed 's/exp/text' : khi bạn gõ một biến nào đó thì nó sẽ hiển ra tương tự như biến mình vừa nhập
+
+https://www.youtube.com/watch?v=4cIaF3uKsKg&t=7458s (27:37)
+
+Phân quyền User và Group trên ubuntu:
+https://www.youtube.com/watch?v=H2bfFXr2M2Y
+
+php bin/magento setup:install --base-url=http://127.0.0.1/magento/ \
+    --db-host=localhost --db-name=pp_12 --db-user=root --db-password=00000000
+    --admin-firstname=Magento --admin-lastname=User --admin-email=test@exampl.com
+    --admin-user=admin --admin-password=admin123 --language=en_US
+    --currency=USD --timezone=America/Chicago --use-rewrites=1
+    --search-engine=elasticsearch7 --elasticsearch-host=localhost
+    --elasticsearch-port=9200
+
+
+php bin/magento setup:install \
+--base-url=http://127.0.0.1/magento/ \
+--db-host=localhost \
+--db-name=magento2 \
+--db-user=magento2 \
+--db-password=123456 \
+--admin-firstname=Admin \
+--admin-lastname=Admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=admin123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1 \
+--search-engine=elasticsearch7 \
+--elasticsearch-host=localhost \
+--elasticsearch-port=8080
+
+Mật khẩu VIB : Huy@01101999 mã PIN: 1099
+Mật khẩu Vietinbank: Huy@01101999
+Mật khẩu BIDV : Huy@01101999 mã PIN: 011099
+Mật khẩu zalo : huy@0110
+Mật khẩu Payoo (0848101999): Huy@01101999
+
+Hợp đồng MG2230500227 :1.072k
+PTFTAICHINH
+
+Hợp đồng 20220821-3940366: 1.707k
+Hợp đồng 20220923-2933540: 1.668k
+FE Credit
+
+Hợp đồng HDSaison ED025415593: 1.813k
+
+Mật khẩu Payoo: huy@01101999
+Mật khẩu VNPT Money : 01101999 (0848101999)
+
+Doctor Đồng
+Mã hợp đồng 16759267 - 6759267
+Momo và Payoo
+
+Mật khẩu Facebook
+nhathuy@01101999
+khongaiyeuanhca
+
+Mật khẩu timviec365 (nhathuynguyenhai@gmail.com) : huy@01101999 - nhathuy1999
+
+Lương : 3-10 triệu
+Nhân viên sale
+Lương : 6-20 triệu
+Trưởng phòng
+
+Mật khẩu 0706704264 : tai101197
+Mật khẩu Lazada: huy@01101999
+Mật khẩu alo nhà đất - batdongsan : nhathuy1999 - Huy@01101999
+Mật khẩu Shopee: Huy@01101999
+Mật khẩu chợ tốt : nhathuy1999
+Mật khẩu FPT Play: 011099
+
+888xh.cc:
+Huy01101999
+Mật khẩu : huy0110
+
+Mật khẩu zalo 0783379760: quy301097
+https://nhadatvui.vn/
+tuyendung.hue@gosu.vn
+
+https://thachpham.com/web-development/html-css/cac-the-dinh-dang-chu-viet-va-van-ban-html.html
+
+
+26/1
+29/1
+1/2
+4/2
+7/2
+
+10/2
+13/2
+16/2
+19/2
+22/2
+
+24/2
+26/2
